@@ -4,11 +4,9 @@
 //  AUTHOR: Rob Tillaart
 // PURPOSE: Arduino library for DAC8551 SPI Digital Analog Convertor  
 //          could work with DAC8550, not tested
-// VERSION: 0.1.2
+// VERSION: 0.1.3
 // HISTORY: See DAC8551.cpp
 //     URL: https://github.com/RobTillaart/DAC8551
-//
-// Released to the public domain
 //
 
 #include <SPI.h>
@@ -18,7 +16,7 @@
 #define DAC8551_POWERDOWN_100K     2
 #define DAC8551_POWERDOWN_HIGH_IMP 3
 
-#define DAC8551_LIB_VERSION "0.1.2"
+#define DAC8551_LIB_VERSION "0.1.3"
 
 class DAC8551
 {
