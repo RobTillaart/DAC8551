@@ -41,7 +41,7 @@ unittest_teardown()
 {
 }
 
-
+/*
 unittest(test_SW_constructor)
 {
   DAC8551 DAC(10);
@@ -95,7 +95,7 @@ unittest(test_powerDown)
   DAC.setPowerDown(DAC8551_POWERDOWN_HIGH_IMP);
   assertEqual(DAC8551_POWERDOWN_HIGH_IMP, DAC.getPowerDownMode());
 }
-
+*/
 
 unittest_main()
 
