@@ -2,22 +2,22 @@
 //    FILE: DAC8551.cpp
 //  AUTHOR: Rob Tillaart
 // PURPOSE: Arduino library for DAC8551 SPI Digital Analog Convertor
-// VERSION: 0.1.3
+// VERSION: 0.2.0
 //     URL: https://github.com/RobTillaart/DAC8551
 //
 // HISTORY:
-//   0.1.0: 2017-12-18 initial version
-//   0.1.1: 2017-12-19 fix begin() bug
-//   0.1.2  2020-04-06 minor refactor, readme.md
-//   0.1.3  2020-06-07 fix library.json
-//
+//   0.1.0: 2017-12-18  initial version
+//   0.1.1: 2017-12-19  fix begin() bug
+//   0.1.2  2020-04-06  minor refactor, readme.md
+//   0.1.3  2020-06-07  fix library.json
+//   0.2.0  2020-12-18  add slaveSelect to hardware SPI
 
-#include <SPI.h>
-#include <DAC8551.h>
+#include "DAC8551.h"
 
-DAC8551::DAC8551()
+DAC8551::DAC8551(uint8_t slaveSelect)
 {
   _hwSPI = true;
+  _slaveSelect = slaveSelect;
 }
 
 DAC8551::DAC8551(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)
@@ -32,17 +32,19 @@ DAC8551::DAC8551(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)
 // and sets internal state
 void DAC8551::begin()
 {
+  pinMode(_slaveSelect, OUTPUT);
+  digitalWrite(_slaveSelect, HIGH);
+
   if(_hwSPI)
   {
     SPI.begin();
+
     delay(1);
   }
   else
   {
     pinMode(_spiData, OUTPUT);
     pinMode(_spiClock, OUTPUT);
-    pinMode(_slaveSelect, OUTPUT);
-    digitalWrite(_slaveSelect, HIGH);
     digitalWrite(_spiData, LOW);
     digitalWrite(_spiClock, LOW);
   }
