@@ -17,17 +17,17 @@ The DAC8551 is a SPI based 16 bit DAC with one channel.
 
 ### Core
 
-- **DAC8551(uint8_t slaveSelect)** Constructor for hardware SPI, 
+- **DAC8551(uint8_t slaveSelect)** Constructor for hardware SPI,
 since 0.2.0 the slaveSelect pin needs to be defined.
 - **DAC8551(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)** Constructor for the software SPI
 - **void begin()** initializes all pins to default state
-- **void setValue(uint16_t value)** set the value of the channel 0 - 65535
+- **void setValue(uint16_t value)** set the value of the channel to 0 - 65535
 - **uint16_t getValue()** returns the last value written.
 
 ### Power down
-
-- **void setPowerDown(uint8_t powerDownMode)** sets power down mode. 0 - 3,
 check datasheet for details.
+
+- **void setPowerDown(uint8_t powerDownMode)** sets power down mode. 0 - 3.
 - **uint8_t getPowerDownMode()** returns last written mode.
 
 | Power down mode         | Value |

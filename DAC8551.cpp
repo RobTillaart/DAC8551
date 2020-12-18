@@ -39,7 +39,6 @@ void DAC8551::begin()
   if(_hwSPI)
   {
     SPI.begin();
-
     delay(1);
   }
   else

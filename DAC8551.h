@@ -37,7 +37,7 @@ private:
   uint8_t  _spiClock;
   uint8_t  _slaveSelect;
   bool     _hwSPI;
-  uint8_t  _value;
+  uint16_t _value;
   uint8_t  _register;
 
   void     updateDevice();

@@ -42,7 +42,7 @@ unittest_teardown()
 }
 
 /*
-unittest(test_SW_constructor)
+unittest(test_HW_constructor)
 {
   DAC8551 DAC(10);
   DAC.begin();
@@ -60,7 +60,7 @@ unittest(test_SW_constructor)
 }
 
 
-unittest(test_HW_constructor)
+unittest(test_SW_constructor)
 {
   DAC8551 DAC(4, 5, 6);
   DAC.begin();
