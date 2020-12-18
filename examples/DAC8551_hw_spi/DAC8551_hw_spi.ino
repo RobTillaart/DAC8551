@@ -2,14 +2,15 @@
 //    FILE: DAC8551_hw_spi.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo DAC8551 library Arduino with hardware SPI
-// VERSION: 0.1.1
+// VERSION: 0.2.0
 //     URL: https://github.com/RobTillaart/DAC8551
 //
 
-#include <SPI.h>
+
 #include "DAC8551.h"
 
-DAC8551 DAC;
+// HW SPI uses slave spin since 0.2.0
+DAC8551 DAC(10);
 
 void setup()
 {

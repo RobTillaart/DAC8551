@@ -2,11 +2,10 @@
 //    FILE: DAC8551_sw_spi.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo DAC8551 library Arduino with software SPI
-// VERSION: 0.1.1
+// VERSION: 0.2.0
 //     URL: https://github.com/RobTillaart/DAC8551
 //
 
-#include <SPI.h>
 #include "DAC8551.h"
 
 // SW SPI pins 4,5,6
