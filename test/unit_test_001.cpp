@@ -23,10 +23,6 @@
 
 #include <ArduinoUnitTests.h>
 
-#define assertEqualFloat(arg1, arg2, arg3)  assertOp("assertEqualFloat", "expected", fabs(arg1 - arg2), compareLessOrEqual, "<=", "actual", arg3)
-#define assertEqualINF(arg)  assertOp("assertEqualINF", "expected", INFINITY, compareEqual, "==", "actual", arg)
-#define assertEqualNAN(arg)  assertOp("assertEqualNAN", "expected", true, compareEqual, "==", "actual", isnan(arg))
-
 
 #include "Arduino.h"
 #include "DAC8551.h"
@@ -41,7 +37,7 @@ unittest_teardown()
 {
 }
 
-/*
+
 unittest(test_HW_constructor)
 {
   DAC8551 DAC(10);
@@ -95,7 +91,7 @@ unittest(test_powerDown)
   DAC.setPowerDown(DAC8551_POWERDOWN_HIGH_IMP);
   assertEqual(DAC8551_POWERDOWN_HIGH_IMP, DAC.getPowerDownMode());
 }
-*/
+
 
 unittest_main()
 
