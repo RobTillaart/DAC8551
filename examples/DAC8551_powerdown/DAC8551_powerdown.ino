@@ -9,8 +9,10 @@
 
 #include "DAC8551.h"
 
+
 // HW SPI uses slave spin since 0.2.0
 DAC8551 mydac(10);
+
 
 void setup()
 {
@@ -19,6 +21,7 @@ void setup()
   Serial.println(DAC8551_LIB_VERSION);
   mydac.begin();
 }
+
 
 void loop()
 {

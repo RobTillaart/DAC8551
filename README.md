@@ -7,11 +7,13 @@
 
 Arduino library for DAC8551 SPI Digital Analog Convertor
 
+
 ## Description
 
-**Warning** not tested extensively
-
 The DAC8551 is a SPI based 16 bit DAC with one channel.
+
+**Warning** this library is not tested extensively
+
 
 ## Interface
 
@@ -25,6 +27,7 @@ since 0.2.0 the slaveSelect pin needs to be defined.
 - **uint16_t getValue()** returns the last value written.
 
 ### Power down
+
 check datasheet for details.
 
 - **void setPowerDown(uint8_t powerDownMode)** sets power down mode. 0 - 3.

@@ -28,7 +28,6 @@
 #include "DAC8551.h"
 
 
-
 unittest_setup()
 {
 }
