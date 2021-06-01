@@ -76,7 +76,7 @@ uint16_t DAC8551::getValue()
 
 void DAC8551::setPowerDown(uint8_t powerDownMode)
 {
-  _register = powerDownMode;
+  _register = (powerDownMode & 0x03);
   updateDevice();
 }
 
