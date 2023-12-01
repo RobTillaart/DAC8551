@@ -14,7 +14,7 @@ DAC8551::DAC8551(uint8_t select, __SPI_CLASS__ * spi)
   _select  = select;
   _dataOut = 255;
   _clock   = 255;
-  _mySPI   = spi
+  _mySPI   = spi;
   _hwSPI   = true;
 }
 
@@ -24,7 +24,7 @@ DAC8551::DAC8551(uint8_t select, uint8_t spiData, uint8_t spiClock)
   _select  = select;
   _dataOut = spiData;
   _clock   = spiClock;
-  _mySPI   = NULL
+  _mySPI   = NULL;
   _hwSPI   = false;
 }
 
