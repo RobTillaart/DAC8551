@@ -44,7 +44,7 @@ void DAC8551::begin()
     _mySPI->begin();
     delay(1);
   }
-  else                 //  software SPI
+  else  //  SOFTWARE SPI
   {
     pinMode(_dataOut, OUTPUT);
     pinMode(_clock, OUTPUT);
@@ -144,7 +144,7 @@ DAC8501::DAC8501(uint8_t select, __SPI_CLASS__ * spi) : DAC8551(select, spi)
 DAC8501::DAC8501(uint8_t select, uint8_t spiData, uint8_t spiClock)
                 : DAC8551(select, spiData, spiClock)
 {
-}
+} 
 
 
 DAC8531::DAC8531(uint8_t select, __SPI_CLASS__ * spi) : DAC8551(select, spi)
