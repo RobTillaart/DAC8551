@@ -94,7 +94,7 @@ void DAC8551::setSPIspeed(uint32_t speed)
 
 //////////////////////////////////////////////////////////////////
 //
-//  PRIVATE
+//  PROTECTED
 //
 void DAC8551::updateDevice()
 {

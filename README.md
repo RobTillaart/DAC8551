@@ -24,8 +24,23 @@ They all have classes derived 1 to 1 from DAC8551.
 **Warning** this library is not tested extensively.
 
 
+#### 0.3.0 Breaking change
+
+The version 0.3.0 has breaking changes in the interface. 
+The essence is removal of ESP32 specific code from the library. 
+This makes it possible to support the ESP32-S3 and other processors in the future. 
+Also it makes the library a bit simpler to maintain.
+
+Note order of parameters changed.
+
+
 #### Related
 
+- https://github.com/RobTillaart/DAC8550
+- https://github.com/RobTillaart/DAC8551
+- https://github.com/RobTillaart/DAC8552
+- https://github.com/RobTillaart/DAC8554
+- https://github.com/RobTillaart/MCP_DAC
 - https://github.com/RobTillaart/AD5680  (18 bit DAC)
 
 
