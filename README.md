@@ -58,24 +58,6 @@ To be used only if one needs a specific speed.
 - **bool usesHWSPI()** returns true if HW SPI is used.
 
 
-### ESP32 specific
-
-- **void selectHSPI()** in case hardware SPI, the ESP32 has two options HSPI and VSPI.
-- **void selectVSPI()** see above.
-- **bool usesHSPI()** returns true if HSPI is used.
-- **bool usesVSPI()** returns true if VSPI is used.
-
-The **selectVSPI()** or the **selectHSPI()** needs to be called 
-BEFORE the **begin()** function.
-
-
-#### experimental
-
-- **void setGPIOpins(uint8_t clk, uint8_t miso, uint8_t mosi, uint8_t select)** 
-overrule GPIO pins of ESP32 for hardware SPI. 
-Needs to be called AFTER the **begin()** function.
-
-
 ### Power down
 
 check datasheet for details.
