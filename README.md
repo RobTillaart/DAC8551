@@ -37,15 +37,13 @@ They all have classes derived 1 to 1 from DAC8551.
 
 ### Core
 
-- **DAC8501(uint8_t slaveSelect)** Constructor for DAC8501 with hardware SPI,
-- **DAC8531(uint8_t slaveSelect)** Constructor for DAC8531 with hardware SPI,
-- **DAC8550(uint8_t slaveSelect)** Constructor for DAC8550 with hardware SPI,
-- **DAC8551(uint8_t slaveSelect)** Constructor for DAC8551 with hardware SPI,
-since 0.2.0 the slaveSelect pin needs to be defined.
-- **DAC8501(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)** Constructor for the software SPI
-- **DAC8531(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)** Constructor for the software SPI
-- **DAC8550(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)** Constructor for the software SPI
-- **DAC8551(uint8_t spiData, uint8_t spiClock, uint8_t slaveSelect)** Constructor for the software SPI
+- **DAC8551(uint8_t select, SPIClassRP2040 \* spi = &SPI)** Constructor HW SPI RP2040.
+- **DAC8551(uint8_t select, SPIClass \* spi = &SPI)** Constructor HW SPI other.
+- **DAC8551(uint8_t select, uint8_t spiData, uint8_t spiClock)** Constructor SW SPI.
+- **DAC8501(...)** idem constructors for DAC8501.
+- **DAC8531(...)** idem constructors for DAC8531.
+- **DAC8550(...)** idem constructors for DAC8550.
+- **DAC8551(...)** idem constructors for DAC8551.
 - **void begin()** initializes all pins to default state
 - **void setValue(uint16_t value)** set the value of the channel to 0 - 65535
 - **uint16_t getValue()** returns the last value written.
